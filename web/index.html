@@ -2,32 +2,66 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Let's Go</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>עץ אחד מערכות</title>
 <link rel="icon" href="data:,">
 <style>
-  :root { --bg: #ff0000; --card: #ffff80; --ink: #000; --frame: #808080; }
-  html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink);
-    font-family: Arial, "Arimo", "Liberation Sans", sans-serif; }
-  main { max-width: 900px; margin: 0 auto; padding: 32px max(16px, env(safe-area-inset-left, 0px)) 48px; }
-  h1 { margin: 0 0 6px; text-align: center; font-size: 26px; color: #fff; }
-  p.sub { margin: 0 0 28px; text-align: center; color: #fff; font-size: 16px; }
-  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-  a.app { display: block; background: var(--card); border: 1px solid #000; text-decoration: none; color: var(--ink);
-    box-shadow: inset -3px -3px 0 var(--frame), inset 2px 2px 0 #fff; padding: 12px; }
-  a.app:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-  a.app img { display: block; width: 100%; height: auto; border: 1px solid #000; }
-  a.app span { display: block; text-align: center; font-size: 22px; font-weight: bold; margin-top: 10px; direction: ltr; }
+  /* Styled after the apps' own title screens: red ground, yellow panels,
+     Windows 3.1 bevelled buttons, bitmaps scaled by whole pixels. */
+  :root {
+    --ground: #ff0000; --panel: #ffff80; --face: #c0c0c0; --ink: #000;
+    --shadow: #808080; --light: #fff; --title: #ff0000;
+    color-scheme: light;
+  }
+  html, body { margin: 0; min-height: 100%; background: var(--ground); color: var(--ink);
+    font-family: Arial, "Arimo", "Liberation Sans", Helvetica, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; box-sizing: border-box; min-height: 100vh;
+    padding-block: 40px 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: flex; flex-direction: column; align-items: center; gap: 40px; }
+
+  .logo { margin: 0; background: var(--panel); border: 2px solid var(--ink); border-radius: 18px;
+    padding: 28px 32px; box-shadow: 6px 6px 0 rgba(0,0,0,.35); max-width: 100%; box-sizing: border-box; }
+  .logo img { display: block; width: 582px; max-width: 100%; height: auto; image-rendering: pixelated; }
+
+  .apps { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; width: 100%; }
+  a.app {
+    flex: 1 1 380px; max-width: 450px; min-width: 0; box-sizing: border-box;
+    display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 18px 18px 16px;
+    background: var(--face); color: var(--ink); text-decoration: none; border: 2px solid var(--ink);
+    box-shadow: inset 3px 3px 0 var(--light), inset -3px -3px 0 var(--shadow);
+  }
+  a.app:hover { background: #d4d4d4; }
+  a.app:active { box-shadow: inset 3px 3px 0 var(--shadow), inset -1px -1px 0 var(--light); }
+  a.app:active > * { transform: translate(2px, 2px); }
+  a.app:focus-visible { outline: 3px dotted var(--ink); outline-offset: -10px; }
+  a.app img { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+  a.app .name { direction: ltr; font-size: clamp(26px, 4.4vw, 38px); font-weight: bold; font-style: italic;
+    color: var(--title); line-height: 1.1; text-align: center;
+    text-decoration: underline dashed var(--title); text-underline-offset: 7px; text-decoration-thickness: 3px; }
+  a.app .what { font-size: 17px; text-align: center; }
+
+  footer { color: var(--light); font-size: 13px; text-align: center; }
+  @media (prefers-reduced-motion: reduce) { a.app:active > * { transform: none; } }
 </style>
 </head>
 <body>
 <main>
-  <h1>עץ אחד מערכות</h1>
-  <p class="sub">תוכנות לימוד אנגלית לילדים, משוחזרות לדפדפן</p>
-  <div class="apps">
-    <a class="app" href="abc/"><img src="abc/assets/ui/cover_bg.png" alt="Let's Go ABC" width="640" height="480"><span>Let's Go ABC</span></a>
-    <a class="app" href="phonetics/"><img src="phonetics/assets/ui/cover_bg.png" alt="Let's Go Phonetics" width="640" height="480"><span>Let's Go Phonetics</span></a>
-  </div>
+  <h1 class="logo"><img src="onetree_logo.png" alt="עץ אחד מערכות" width="291" height="44"></h1>
+  <nav class="apps" aria-label="תוכנות">
+    <a class="app" href="abc/">
+      <img src="strip_abc.png" alt="" width="492" height="162">
+      <span class="name">Let's Go ABC</span>
+      <span class="what">האותיות באנגלית: כתיבה, צלילים, מקלדת ומשחקים</span>
+    </a>
+    <a class="app" href="phonetics/">
+      <img src="strip_phonetics.png" alt="" width="497" height="182">
+      <span class="name">Let's Go Phonetics</span>
+      <span class="what">צלילים, מילים ומשפטים: קריאה, איות והקלדה</span>
+    </a>
+  </nav>
+  <footer>© כל הזכויות שמורות · איורים: אוסנת הרצברג</footer>
 </main>
 </body>
 </html>
