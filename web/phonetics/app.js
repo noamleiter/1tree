@@ -18,8 +18,9 @@ const bg = () => COLOURS[colour];
 
 // ---------------------------------------------------------------- scaling
 function fit() {
-  const s = Math.min(innerWidth / 640, innerHeight / 480);
-  stage.style.transform = `scale(${s})`;
+  const bar = document.getElementById('home') ? 34 : 0;   // room for the home bar
+  const s = Math.min(innerWidth / 640, (innerHeight - bar) / 480);
+  stage.style.transform = `translate(-50%, -50%) scale(${s})`;
   stage.dataset.scale = s;
 }
 addEventListener('resize', fit); fit();

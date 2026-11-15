@@ -24,8 +24,9 @@ let KEYS = window.KEY_BOXES || {};      // "Q" -> [x0,y0,x1,y1] within the keybo
 
 // ---------------------------------------------------------------- scaling
 function fit() {
-  const s = Math.min(innerWidth / 640, innerHeight / 480);
-  stage.style.transform = `scale(${s})`;
+  const bar = document.getElementById('home') ? 34 : 0;   // room for the home bar
+  const s = Math.min(innerWidth / 640, (innerHeight - bar) / 480);
+  stage.style.transform = `translate(-50%, -50%) scale(${s})`;
   stage.dataset.scale = s;
 }
 addEventListener('resize', fit); fit();

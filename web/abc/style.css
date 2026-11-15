@@ -4,7 +4,7 @@
 html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
 #wrap { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
 #stage {
-  position: relative; width: 640px; height: 480px; overflow: hidden;
+  position: absolute; left: 50%; top: 50%; width: 640px; height: 480px; overflow: hidden;
   transform-origin: center center; background: #fff;
   font-family: Arial, "Arimo", "Liberation Sans", Helvetica, sans-serif;
   user-select: none; -webkit-user-select: none; touch-action: none;
@@ -47,3 +47,16 @@ html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
 .drag-ghost { position: absolute; z-index: 50; pointer-events: none; opacity: .9; }
 .dragging { opacity: .35; }
 .nomic { display: none !important; }
+
+/* home bar above the stage: back to the 1tree landing page */
+#home ~ #wrap { top: 34px; }
+#home {
+  position: fixed; top: 3px; right: max(6px, env(safe-area-inset-right, 0px)); height: 28px; z-index: 100;
+  display: flex; align-items: center; gap: 6px; padding: 0 10px 0 8px; box-sizing: border-box;
+  background: #c0c0c0; color: #000; text-decoration: none; border: 1px solid #000; direction: rtl;
+  box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #808080;
+  font: bold 15px Arial, "Arimo", sans-serif;
+}
+#home img { height: 20px; width: auto; image-rendering: pixelated; }
+#home:active { box-shadow: inset 2px 2px 0 #808080, inset -1px -1px 0 #fff; }
+#home:focus-visible { outline: 2px dotted #fff; outline-offset: 2px; }
