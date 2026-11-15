@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item key="dialogWidth" value="768"/>
+		<item key="dialogHeight" value="530"/>
+		<list key="textEntries">
+		</list>
+		<list key="orderedProviders">
+		</list>
+		<list key="textArray">
+		</list>
+		<list key="orderedElements">
+		</list>
+	</section>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="203"/>
+		<item key="DIALOG_Y_ORIGIN" value="11"/>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="-105"/>
+		<item key="DIALOG_FONT_NAME" value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma"/>
+		<item key="DIALOG_HEIGHT" value="647"/>
+		<item key="DIALOG_Y_ORIGIN" value="-18"/>
+		<item key="DIALOG_WIDTH" value="584"/>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

@@ -1,0 +1,5 @@
+#Thu Oct 04 23:54:26 IST 2012
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.help.ui.localSearch.master=true
+expression=Android SDK directory

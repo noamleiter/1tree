@@ -1,0 +1,75 @@
+!SESSION 2012-10-04 23:46:43.218 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 2 2012-10-04 23:55:52.390
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2012-10-04 23:55:55.312 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 2 2012-10-05 00:09:41.890
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2012-10-05 00:09:43.125 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Documents and Settings\dell\My Documents\Dropbox\1tree\APPs
+
+!ENTRY org.eclipse.ui 2 2 2012-10-05 00:11:57.515
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2012-10-05 00:13:08.031 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2012-10-05 00:14:15.593
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2012-10-05 00:14:15.593
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2012-10-05 00:14:15.593
+!MESSAGE "Android Hierarchy Viewer" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2012-10-05 00:14:15.593
+!MESSAGE "Android Development Tools" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2012-10-05 00:14:15.593
+!MESSAGE "Tracer for OpenGL ES" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2012-10-05 00:14:15.593
+!MESSAGE "Android DDMS" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2012-10-05 00:14:15.593
+!MESSAGE "Android Traceview" will be ignored because it is already installed.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2012-10-05 00:14:15.593
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2012-10-05 00:14:15.593
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2012-10-05 00:14:15.593
+!MESSAGE "Android Hierarchy Viewer" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2012-10-05 00:14:15.593
+!MESSAGE "Android Development Tools" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2012-10-05 00:14:15.593
+!MESSAGE "Tracer for OpenGL ES" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2012-10-05 00:14:15.593
+!MESSAGE "Android DDMS" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2012-10-05 00:14:15.593
+!MESSAGE "Android Traceview" will be ignored because it is already installed.
+
+!ENTRY org.eclipse.ui 2 2 2012-10-05 00:21:01.937
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2012-10-05 00:21:10.781 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.5.0_06
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 2 2012-10-05 00:22:19.906
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
