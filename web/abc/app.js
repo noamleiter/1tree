@@ -47,7 +47,11 @@ function el(tag, o = {}, parent = stage) {
   if (parent) parent.appendChild(e);
   return e;
 }
-const img = (src, x, y, click, parent = stage) => el('img', { src: UI + src + '.png', x, y, click }, parent);
+const img = (src, x, y, click, parent = stage) => {
+  const e = el('img', { src: UI + src + '.png', x, y, click }, parent);
+  if (src === 'btn_mic' && window.ABC_NO_MIC) e.classList.add('nomic');   // no microphone where the page is hosted
+  return e;
+};
 const hot = (x0, y0, x1, y1, click, parent = stage) => el('div', { x: x0, y: y0, w: x1 - x0, h: y1 - y0, click }, parent);
 const show = (...es) => es.forEach(e => e && e.classList.remove('hidden'));
 const hide = (...es) => es.forEach(e => e && e.classList.add('hidden'));
