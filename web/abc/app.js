@@ -19,8 +19,8 @@ const WORDS = [
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 const picSrc = (wd, colored) => `${A}${wd.pic}_${colored ? 3 : 1}.png`;
 
-let STROKES = {};   // "l_a" -> [frame indices]
-let KEYS = {};      // "Q" -> [x0,y0,x1,y1] within the keyboard image
+let STROKES = window.STROKE_INDEX || {};   // "l_a" -> [frame indices]
+let KEYS = window.KEY_BOXES || {};      // "Q" -> [x0,y0,x1,y1] within the keyboard image
 
 // ---------------------------------------------------------------- scaling
 function fit() {
@@ -683,7 +683,4 @@ function draggable(node, { targets, drop }) {
 }
 
 // ---------------------------------------------------------------- boot
-Promise.all([
-  fetch(A + 'strokes/index.json').then(r => r.json()).then(j => STROKES = j),
-  fetch(UI + 'keys.json').then(r => r.json()).then(j => KEYS = j),
-]).catch(e => console.warn('index load failed', e)).finally(showCover);
+showCover();
