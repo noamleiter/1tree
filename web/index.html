@@ -1,10 +1,33 @@
 <!doctype html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Let's Go</title>
-<meta http-equiv="refresh" content="0; url=abc/">
 <link rel="icon" href="data:,">
+<style>
+  :root { --bg: #ff0000; --card: #ffff80; --ink: #000; --frame: #808080; }
+  html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink);
+    font-family: Arial, "Arimo", "Liberation Sans", sans-serif; }
+  main { max-width: 900px; margin: 0 auto; padding: 32px max(16px, env(safe-area-inset-left, 0px)) 48px; }
+  h1 { margin: 0 0 6px; text-align: center; font-size: 26px; color: #fff; }
+  p.sub { margin: 0 0 28px; text-align: center; color: #fff; font-size: 16px; }
+  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  a.app { display: block; background: var(--card); border: 1px solid #000; text-decoration: none; color: var(--ink);
+    box-shadow: inset -3px -3px 0 var(--frame), inset 2px 2px 0 #fff; padding: 12px; }
+  a.app:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  a.app img { display: block; width: 100%; height: auto; border: 1px solid #000; }
+  a.app span { display: block; text-align: center; font-size: 22px; font-weight: bold; margin-top: 10px; direction: ltr; }
+</style>
 </head>
-<body><a href="abc/">Let's Go ABC</a></body>
+<body>
+<main>
+  <h1>עץ אחד מערכות</h1>
+  <p class="sub">תוכנות לימוד אנגלית לילדים, משוחזרות לדפדפן</p>
+  <div class="apps">
+    <a class="app" href="abc/"><img src="abc/assets/ui/cover_bg.png" alt="Let's Go ABC" width="640" height="480"><span>Let's Go ABC</span></a>
+    <a class="app" href="phonetics/"><img src="phonetics/assets/ui/cover_bg.png" alt="Let's Go Phonetics" width="640" height="480"><span>Let's Go Phonetics</span></a>
+  </div>
+</main>
+</body>
 </html>
