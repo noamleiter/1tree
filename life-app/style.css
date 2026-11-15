@@ -1,0 +1,63 @@
+/* Let's Go LIFE — a new screen set in the style of the 1tree apps (640x480 Win3.1 stage, scaled to fit).
+   The original program for these recordings is lost; only the voice clips survive. */
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+#wrap { position: fixed; inset: 0; }
+#stage {
+  position: absolute; left: 50%; top: 50%; width: 640px; height: 480px; overflow: hidden;
+  transform-origin: center center; background: #8080ff; color: #000;
+  font-family: Arial, "Arimo", "Liberation Sans", Helvetica, sans-serif;
+  user-select: none; -webkit-user-select: none; touch-action: none;
+}
+#stage img { image-rendering: pixelated; -webkit-user-drag: none; }
+.a { position: absolute; box-sizing: border-box; }
+.hot { cursor: pointer; }
+.he { direction: rtl; }
+
+.vbtn {
+  position: absolute; box-sizing: border-box; background: #fff; border: 1px solid #000;
+  box-shadow: inset -2px -2px 0 #808080, inset 1px 1px 0 #fff;
+  display: flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer;
+  font-size: 16px; font-weight: bold;
+}
+.vbtn:active { box-shadow: inset 2px 2px 0 #808080; }
+.vbtn.grey { background: #c0c0c0; }
+.vbtn[disabled] { color: #808080; pointer-events: none; }
+
+/* cover */
+.panel { position: absolute; background: #ffff80; border: 2px solid #000; border-radius: 16px; box-shadow: 5px 5px 0 rgba(0,0,0,.35); }
+.title { position: absolute; left: 0; right: 0; text-align: center; color: #ff0000; font-weight: bold; font-style: italic;
+  text-decoration: underline dashed #ff0000; text-decoration-thickness: 3px; text-underline-offset: 8px; }
+
+.bar { position: absolute; left: 0; right: 0; top: 0; height: 40px; background: #800080; color: #fff;
+  font-size: 22px; line-height: 40px; text-align: center; letter-spacing: 1px; }
+
+/* scene cards on the menu */
+.card {
+  position: absolute; box-sizing: border-box; background: #fff; border: 1px solid #000; cursor: pointer;
+  box-shadow: inset -3px -3px 0 #808080, inset 2px 2px 0 #dfdfdf; padding: 6px 7px; overflow: hidden;
+}
+.card:active { box-shadow: inset 3px 3px 0 #808080; }
+.card .num { font-size: 30px; font-weight: bold; color: #ff0000; line-height: 32px; }
+.card .txt { font-size: 12px; line-height: 14px; margin-top: 4px; direction: ltr; text-align: left; }
+.card.has-ans { background: #ffff80; }
+.legend { position: absolute; font-size: 14px; font-weight: bold; color: #fff; display: flex; align-items: center; gap: 8px; }
+.legend i { width: 22px; height: 16px; background: #ffff80; border: 1px solid #000; }
+.card.done .num::after { content: " ✓"; color: #008000; font-size: 22px; }
+
+/* sentence rows */
+.row { position: absolute; left: 14px; width: 440px; display: flex; flex-wrap: wrap; gap: 8px; direction: ltr; }
+.phrase { background: #fff; font-size: 22px; line-height: 34px; height: 34px; padding: 0 8px; border: 1px solid #000; white-space: pre; cursor: pointer; }
+.phrase.cur { background: #ffff00; }
+.mode { position: absolute; left: 14px; font-size: 14px; font-weight: bold; color: #fff; }
+
+/* build game */
+.pool { position: absolute; left: 14px; width: 612px; display: flex; flex-wrap: wrap; gap: 18px; direction: ltr; align-items: flex-start; }
+.built { gap: 8px; min-height: 60px; background: #fff; border: 1px solid #808080; padding: 10px; box-sizing: border-box; }
+.chip { background: #fff; font-size: 22px; line-height: 38px; height: 40px; padding: 0 10px; border: 1px solid #000;
+  box-shadow: inset -2px -2px 0 #808080; white-space: pre; box-sizing: border-box; }
+.built .chip { background: #ffff80; box-shadow: none; }
+.dropbox { width: 110px; height: 40px; border: 2px dashed #808080; box-sizing: border-box; }
+.hint { position: absolute; left: 14px; right: 14px; text-align: center; font-size: 17px; font-weight: bold; color: #fff; }
+
+.drag-ghost { z-index: 50; pointer-events: none; opacity: .9; margin: 0; }
+.dragging { opacity: .35; }
