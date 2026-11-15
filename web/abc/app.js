@@ -116,7 +116,7 @@ function showCover() {
   el('div', { x: 0, y: 466, w: 110, h: 14, cls: 'he', text: '© כל הזכויות שמורות', style: { background: '#fff', fontSize: '11px', lineHeight: '14px', paddingRight: '3px' } });
   hot(136, 422, 232, 463, () => help(A + 'help.png'));                 // הסבר
   hot(273, 422, 370, 465, () => help(A + 'hevra.png'));                // הזמנות
-  hot(412, 422, 511, 467, () => { play('lets_go'); showMenu(); });     // התחל
+  hot(412, 422, 511, 467, () => { showMenu(); play('lets_go'); });     // התחל
 }
 
 // ================================================================ 2. main menu (form "Cover")
