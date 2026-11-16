@@ -124,7 +124,6 @@ function showCover() {
   img('cover_bg', 0, 0);
   el('div', { x: 0, y: 466, w: 110, h: 14, cls: 'he', text: '© כל הזכויות שמורות', style: { background: '#fff', fontSize: '11px', lineHeight: '14px', paddingRight: '3px' } });
   hot(75, 419, 178, 467, () => helpCard(A + 'help.png'));                      // הסבר
-  hot(269, 419, 372, 467, () => helpCard(A + 'hevra.png'));                    // הזמנות
   hot(466, 419, 570, 469, () => { showTop(0); play('lets_go'); });             // התחל
 }
 
